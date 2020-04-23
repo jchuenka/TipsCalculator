@@ -7,3 +7,8 @@
 //
 
 import Foundation
+public class BillInfo : NSObject{
+    var amountPreTax : Float = 0.0
+    var taxPercent : Float = 0.0
+    var tipPercent : Float = 0.0
+}

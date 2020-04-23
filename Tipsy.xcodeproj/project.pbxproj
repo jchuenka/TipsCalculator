@@ -3,18 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B957D272DB0FDDBE599E81B /* Pods_TipsyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B786094CCA3FAD6EDE293B3 /* Pods_TipsyTests.framework */; };
-		3CEBD83333C0DC8841909D36 /* Pods_Tipsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC24FB36397574ADEBC4B45 /* Pods_Tipsy.framework */; };
+		071B8276A886A7C7EF3098E8 /* TipsyMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FBB501EB33A7EBB98A0BC /* TipsyMocks.generated.swift */; };
+		1F35BA0313AEB702957BACE3 /* Pods_Tipsy_TipsyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB4A2F83F1ED5D93339ABDB /* Pods_Tipsy_TipsyUITests.framework */; };
+		48E973B9438E814FDEFEA3D7 /* Pods_TipsyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8FE5ACB178419330D5FBCB /* Pods_TipsyTests.framework */; };
+		6B44C94B7493FB62EFA0E892 /* Pods_Tipsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A801FDA71869BF51D83CAA /* Pods_Tipsy.framework */; };
 		7B0C5894244F9A4B0085ACE4 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C5893244F9A4B0085ACE4 /* ResultViewController.swift */; };
 		7B0C5897244F9C360085ACE4 /* BillInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C5896244F9C360085ACE4 /* BillInfo.swift */; };
 		7B0C5899244F9C5D0085ACE4 /* BillEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C5898244F9C5D0085ACE4 /* BillEngine.swift */; };
-		7BCACB7B2450A00E00AA5EB1 /* TipsyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCACB7A2450A00E00AA5EB1 /* TipsyTests.swift */; };
+		7B45140B2450D89F00DED3E9 /* Mockingbird in Frameworks */ = {isa = PBXBuildFile; productRef = 7B45140A2450D89F00DED3E9 /* Mockingbird */; };
+		7B45140D2450DE3900DED3E9 /* BillEngineInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45140C2450DE3900DED3E9 /* BillEngineInterface.swift */; };
+		7BCACB7B2450A00E00AA5EB1 /* BillEngineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCACB7A2450A00E00AA5EB1 /* BillEngineTest.swift */; };
 		7BCACB892450A02000AA5EB1 /* TipsyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCACB882450A02000AA5EB1 /* TipsyUITests.swift */; };
-		ABFFC8F8ECB3B1E9852B889F /* Pods_Tipsy_TipsyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9BCC8EF96AC7E5D8A5F87B /* Pods_Tipsy_TipsyUITests.framework */; };
 		ADB689532326708D006D4E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689522326708D006D4E2B /* AppDelegate.swift */; };
 		ADB689552326708D006D4E2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689542326708D006D4E2B /* SceneDelegate.swift */; };
 		ADB689572326708D006D4E2B /* TipCalculatorControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689562326708D006D4E2B /* TipCalculatorControllerView.swift */; };
@@ -41,22 +44,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1ADB4FE70382A79EC7D7A50F /* Pods-Tipsy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tipsy.debug.xcconfig"; path = "Target Support Files/Pods-Tipsy/Pods-Tipsy.debug.xcconfig"; sourceTree = "<group>"; };
-		244D728F740289E6E7CC458D /* Pods-TipsyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipsyTests.release.xcconfig"; path = "Target Support Files/Pods-TipsyTests/Pods-TipsyTests.release.xcconfig"; sourceTree = "<group>"; };
-		2B786094CCA3FAD6EDE293B3 /* Pods_TipsyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TipsyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DA732338F7EB57957817CAF /* Pods-TipsyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipsyTests.debug.xcconfig"; path = "Target Support Files/Pods-TipsyTests/Pods-TipsyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4DC24FB36397574ADEBC4B45 /* Pods_Tipsy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tipsy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61FDE63C7F1ABE9597CB738A /* Pods-Tipsy-TipsyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tipsy-TipsyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tipsy-TipsyUITests/Pods-Tipsy-TipsyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		07489F73F006089A5E7DE7BE /* Pods-Tipsy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tipsy.debug.xcconfig"; path = "Target Support Files/Pods-Tipsy/Pods-Tipsy.debug.xcconfig"; sourceTree = "<group>"; };
+		0E5FBB501EB33A7EBB98A0BC /* TipsyMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = TipsyMocks.generated.swift; path = MockingbirdMocks/TipsyMocks.generated.swift; sourceTree = "<group>"; };
+		14AF9DC49DEBBBE2CEF7CB48 /* Pods-Tipsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tipsy.release.xcconfig"; path = "Target Support Files/Pods-Tipsy/Pods-Tipsy.release.xcconfig"; sourceTree = "<group>"; };
+		2A8FE5ACB178419330D5FBCB /* Pods_TipsyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TipsyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38BD7E5BDCD857A986098603 /* Pods-TipsyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipsyTests.release.xcconfig"; path = "Target Support Files/Pods-TipsyTests/Pods-TipsyTests.release.xcconfig"; sourceTree = "<group>"; };
+		575032972458385649E04931 /* Pods-Tipsy-TipsyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tipsy-TipsyUITests.release.xcconfig"; path = "Target Support Files/Pods-Tipsy-TipsyUITests/Pods-Tipsy-TipsyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B0C5893244F9A4B0085ACE4 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		7B0C5896244F9C360085ACE4 /* BillInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInfo.swift; sourceTree = "<group>"; };
 		7B0C5898244F9C5D0085ACE4 /* BillEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillEngine.swift; sourceTree = "<group>"; };
+		7B45140C2450DE3900DED3E9 /* BillEngineInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillEngineInterface.swift; sourceTree = "<group>"; };
 		7BCACB782450A00E00AA5EB1 /* TipsyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BCACB7A2450A00E00AA5EB1 /* TipsyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTests.swift; sourceTree = "<group>"; };
+		7BCACB7A2450A00E00AA5EB1 /* BillEngineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillEngineTest.swift; sourceTree = "<group>"; };
 		7BCACB7C2450A00E00AA5EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BCACB862450A02000AA5EB1 /* TipsyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCACB882450A02000AA5EB1 /* TipsyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyUITests.swift; sourceTree = "<group>"; };
 		7BCACB8A2450A02000AA5EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		957AB684112424932466E5A1 /* Pods-Tipsy-TipsyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tipsy-TipsyUITests.release.xcconfig"; path = "Target Support Files/Pods-Tipsy-TipsyUITests/Pods-Tipsy-TipsyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A22BA4A3688C63B484FAC97E /* Pods-TipsyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipsyTests.debug.xcconfig"; path = "Target Support Files/Pods-TipsyTests/Pods-TipsyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADB6894F2326708D006D4E2B /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB689522326708D006D4E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB689542326708D006D4E2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,8 +69,9 @@
 		ADB6895B2326708E006D4E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADB6895E2326708E006D4E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADB689602326708E006D4E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD9BCC8EF96AC7E5D8A5F87B /* Pods_Tipsy_TipsyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tipsy_TipsyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D08921A8EAEABB581C26398C /* Pods-Tipsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tipsy.release.xcconfig"; path = "Target Support Files/Pods-Tipsy/Pods-Tipsy.release.xcconfig"; sourceTree = "<group>"; };
+		B6A801FDA71869BF51D83CAA /* Pods_Tipsy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tipsy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE3C420785A00F5954ABCFE9 /* Pods-Tipsy-TipsyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tipsy-TipsyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tipsy-TipsyUITests/Pods-Tipsy-TipsyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FAB4A2F83F1ED5D93339ABDB /* Pods_Tipsy_TipsyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tipsy_TipsyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B957D272DB0FDDBE599E81B /* Pods_TipsyTests.framework in Frameworks */,
+				7B45140B2450D89F00DED3E9 /* Mockingbird in Frameworks */,
+				48E973B9438E814FDEFEA3D7 /* Pods_TipsyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABFFC8F8ECB3B1E9852B889F /* Pods_Tipsy_TipsyUITests.framework in Frameworks */,
+				1F35BA0313AEB702957BACE3 /* Pods_Tipsy_TipsyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CEBD83333C0DC8841909D36 /* Pods_Tipsy.framework in Frameworks */,
+				6B44C94B7493FB62EFA0E892 /* Pods_Tipsy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,11 +120,22 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		4BEBCCDC53730DFDCE6234A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6A801FDA71869BF51D83CAA /* Pods_Tipsy.framework */,
+				FAB4A2F83F1ED5D93339ABDB /* Pods_Tipsy_TipsyUITests.framework */,
+				2A8FE5ACB178419330D5FBCB /* Pods_TipsyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7B0C5895244F9BE00085ACE4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				7B0C5896244F9C360085ACE4 /* BillInfo.swift */,
 				7B0C5898244F9C5D0085ACE4 /* BillEngine.swift */,
+				7B45140C2450DE3900DED3E9 /* BillEngineInterface.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,7 +143,7 @@
 		7BCACB792450A00E00AA5EB1 /* TipsyTests */ = {
 			isa = PBXGroup;
 			children = (
-				7BCACB7A2450A00E00AA5EB1 /* TipsyTests.swift */,
+				7BCACB7A2450A00E00AA5EB1 /* BillEngineTest.swift */,
 				7BCACB7C2450A00E00AA5EB1 /* Info.plist */,
 			);
 			path = TipsyTests;
@@ -141,18 +158,12 @@
 			path = TipsyUITests;
 			sourceTree = "<group>";
 		};
-		9A264AF9A23D74CE6AE81866 /* Pods */ = {
+		9E144DDE917F64751FF13B4A /* Generated Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				1ADB4FE70382A79EC7D7A50F /* Pods-Tipsy.debug.xcconfig */,
-				D08921A8EAEABB581C26398C /* Pods-Tipsy.release.xcconfig */,
-				61FDE63C7F1ABE9597CB738A /* Pods-Tipsy-TipsyUITests.debug.xcconfig */,
-				957AB684112424932466E5A1 /* Pods-Tipsy-TipsyUITests.release.xcconfig */,
-				4DA732338F7EB57957817CAF /* Pods-TipsyTests.debug.xcconfig */,
-				244D728F740289E6E7CC458D /* Pods-TipsyTests.release.xcconfig */,
+				0E5FBB501EB33A7EBB98A0BC /* TipsyMocks.generated.swift */,
 			);
-			name = Pods;
-			path = Pods;
+			name = "Generated Mocks";
 			sourceTree = "<group>";
 		};
 		ADB689462326708D006D4E2B = {
@@ -162,8 +173,9 @@
 				7BCACB792450A00E00AA5EB1 /* TipsyTests */,
 				7BCACB872450A02000AA5EB1 /* TipsyUITests */,
 				ADB689502326708D006D4E2B /* Products */,
-				9A264AF9A23D74CE6AE81866 /* Pods */,
-				B7BFE4215970AAC78B94AEAC /* Frameworks */,
+				D3CDDAD4AE736162EF0A80CA /* Pods */,
+				4BEBCCDC53730DFDCE6234A7 /* Frameworks */,
+				9E144DDE917F64751FF13B4A /* Generated Mocks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,14 +204,17 @@
 			path = Tipsy;
 			sourceTree = "<group>";
 		};
-		B7BFE4215970AAC78B94AEAC /* Frameworks */ = {
+		D3CDDAD4AE736162EF0A80CA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4DC24FB36397574ADEBC4B45 /* Pods_Tipsy.framework */,
-				CD9BCC8EF96AC7E5D8A5F87B /* Pods_Tipsy_TipsyUITests.framework */,
-				2B786094CCA3FAD6EDE293B3 /* Pods_TipsyTests.framework */,
+				07489F73F006089A5E7DE7BE /* Pods-Tipsy.debug.xcconfig */,
+				14AF9DC49DEBBBE2CEF7CB48 /* Pods-Tipsy.release.xcconfig */,
+				BE3C420785A00F5954ABCFE9 /* Pods-Tipsy-TipsyUITests.debug.xcconfig */,
+				575032972458385649E04931 /* Pods-Tipsy-TipsyUITests.release.xcconfig */,
+				A22BA4A3688C63B484FAC97E /* Pods-TipsyTests.debug.xcconfig */,
+				38BD7E5BDCD857A986098603 /* Pods-TipsyTests.release.xcconfig */,
 			);
-			name = Frameworks;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +225,8 @@
 			buildConfigurationList = 7BCACB812450A00E00AA5EB1 /* Build configuration list for PBXNativeTarget "TipsyTests" */;
 			buildPhases = (
 				707DA2E0A1851D034357D7A8 /* [CP] Check Pods Manifest.lock */,
+				BBDF3CFA5A64029EAED3BF07 /* Clean Mockingbird Mocks */,
+				2532B7948D07A1E8477B71DA /* Generate Mockingbird Mocks */,
 				7BCACB742450A00E00AA5EB1 /* Sources */,
 				7BCACB752450A00E00AA5EB1 /* Frameworks */,
 				7BCACB762450A00E00AA5EB1 /* Resources */,
@@ -221,6 +238,9 @@
 				7BCACB7E2450A00E00AA5EB1 /* PBXTargetDependency */,
 			);
 			name = TipsyTests;
+			packageProductDependencies = (
+				7B45140A2450D89F00DED3E9 /* Mockingbird */,
+			);
 			productName = TipsyTests;
 			productReference = 7BCACB782450A00E00AA5EB1 /* TipsyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -295,6 +315,9 @@
 				Base,
 			);
 			mainGroup = ADB689462326708D006D4E2B;
+			packageReferences = (
+				7B4514092450D89F00DED3E9 /* XCRemoteSwiftPackageReference "mockingbird" */,
+			);
 			productRefGroup = ADB689502326708D006D4E2B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,14 +365,34 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TipsyTests/Pods-TipsyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TipsyTests/Pods-TipsyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TipsyTests/Pods-TipsyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		2532B7948D07A1E8477B71DA /* Generate Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"/tmp/Mockingbird-E1240D89-C4D9-41EB-B080-196FF80D8076",
+			);
+			name = "Generate Mockingbird Mocks";
+			outputPaths = (
+				"$(SRCROOT)/MockingbirdMocks/TipsyMocks.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mockingbird generate \\\n  --targets 'Tipsy' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/TipsyMocks.generated.swift\" \\\n  --support \"${SRCROOT}/MockingbirdSupport\"\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-E1240D89-C4D9-41EB-B080-196FF80D8076'\n";
 		};
 		5F66A945E1AFBAC049B1A98D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -417,6 +460,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BBDF3CFA5A64029EAED3BF07 /* Clean Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Clean Mockingbird Mocks";
+			outputPaths = (
+				"/tmp/Mockingbird-E1240D89-C4D9-41EB-B080-196FF80D8076",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo $RANDOM > '/tmp/Mockingbird-E1240D89-C4D9-41EB-B080-196FF80D8076'\n";
+		};
 		C1601BEE0055692BA5BC89C2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,9 +483,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tipsy-TipsyUITests/Pods-Tipsy-TipsyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tipsy-TipsyUITests/Pods-Tipsy-TipsyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -441,7 +503,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BCACB7B2450A00E00AA5EB1 /* TipsyTests.swift in Sources */,
+				7BCACB7B2450A00E00AA5EB1 /* BillEngineTest.swift in Sources */,
+				071B8276A886A7C7EF3098E8 /* TipsyMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +522,7 @@
 			files = (
 				ADB689572326708D006D4E2B /* TipCalculatorControllerView.swift in Sources */,
 				ADB689532326708D006D4E2B /* AppDelegate.swift in Sources */,
+				7B45140D2450DE3900DED3E9 /* BillEngineInterface.swift in Sources */,
 				7B0C5897244F9C360085ACE4 /* BillInfo.swift in Sources */,
 				ADB689552326708D006D4E2B /* SceneDelegate.swift in Sources */,
 				7B0C5899244F9C5D0085ACE4 /* BillEngine.swift in Sources */,
@@ -503,7 +567,7 @@
 /* Begin XCBuildConfiguration section */
 		7BCACB7F2450A00E00AA5EB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DA732338F7EB57957817CAF /* Pods-TipsyTests.debug.xcconfig */;
+			baseConfigurationReference = A22BA4A3688C63B484FAC97E /* Pods-TipsyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -525,7 +589,7 @@
 		};
 		7BCACB802450A00E00AA5EB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 244D728F740289E6E7CC458D /* Pods-TipsyTests.release.xcconfig */;
+			baseConfigurationReference = 38BD7E5BDCD857A986098603 /* Pods-TipsyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -547,7 +611,7 @@
 		};
 		7BCACB8E2450A02000AA5EB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61FDE63C7F1ABE9597CB738A /* Pods-Tipsy-TipsyUITests.debug.xcconfig */;
+			baseConfigurationReference = BE3C420785A00F5954ABCFE9 /* Pods-Tipsy-TipsyUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QDNR9L3F9L;
@@ -568,7 +632,7 @@
 		};
 		7BCACB8F2450A02000AA5EB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 957AB684112424932466E5A1 /* Pods-Tipsy-TipsyUITests.release.xcconfig */;
+			baseConfigurationReference = 575032972458385649E04931 /* Pods-Tipsy-TipsyUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QDNR9L3F9L;
@@ -703,7 +767,7 @@
 		};
 		ADB689642326708E006D4E2B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ADB4FE70382A79EC7D7A50F /* Pods-Tipsy.debug.xcconfig */;
+			baseConfigurationReference = 07489F73F006089A5E7DE7BE /* Pods-Tipsy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -722,7 +786,7 @@
 		};
 		ADB689652326708E006D4E2B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D08921A8EAEABB581C26398C /* Pods-Tipsy.release.xcconfig */;
+			baseConfigurationReference = 14AF9DC49DEBBBE2CEF7CB48 /* Pods-Tipsy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -779,6 +843,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B4514092450D89F00DED3E9 /* XCRemoteSwiftPackageReference "mockingbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/birdrides/mockingbird";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B45140A2450D89F00DED3E9 /* Mockingbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B4514092450D89F00DED3E9 /* XCRemoteSwiftPackageReference "mockingbird" */;
+			productName = Mockingbird;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ADB689472326708D006D4E2B /* Project object */;
 }
