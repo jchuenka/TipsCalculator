@@ -11,11 +11,12 @@ import Foundation
 public protocol BillEngineInterface {
     var splitNumber : Int { get set }
     var splitDisplay : String { get }
-    var amountPreTax : Float { get }
+    var amountPreTax : Float { get set }
     var amountPreTaxDisplay : String { get }
     var taxDisplay : String { get }
+    var taxPercent : Float { get set}
     var tipDisplay : String { get }
-    var tipsPercent : Float { get }
+    var tipsPercent : Float { get set }
     func getSplitAmount() -> Float
     var splitAmountDisplay : String { get }
 }

@@ -9,13 +9,13 @@
 import Foundation
 
 public class BillEngine : BillEngineInterface {
-    private var _billInfo : BillInfo
+    private var billInfo : BillInfo
     public static var defaultTax: Float = 0.0825
     
     public var splitNumber: Int {
         get { splitNum }
         set {
-            if newValue >= 1 {
+            if newValue > 1 {
                 splitNum = newValue
             }
         }
@@ -26,11 +26,16 @@ public class BillEngine : BillEngineInterface {
     }
     
     public var amountPreTax: Float {
-        return self.billInfo.amountPreTax
+        get {
+            return self.billInfo.amountPreTax
+        }
+        set {
+            self.billInfo.amountPreTax = newValue
+        }
     }
     
     public var amountPreTaxDisplay: String {
-        return ""
+        return String(format: "%.2f", amountPreTax)
     }
     
     public var taxDisplay: String {
@@ -38,28 +43,41 @@ public class BillEngine : BillEngineInterface {
     }
     
     public var tipDisplay: String {
-        return ""
+        return "\(Int(tipsPercent * 100))%"
     }
     
     public var tipsPercent: Float {
-        return self.billInfo.tipPercent
+        get {
+            return self.billInfo.tipPercent
+        }
+        set {
+            self.billInfo.tipPercent = newValue
+        }
     }
     
+    public var taxPercent: Float {
+        get {
+            self.billInfo.taxPercent
+            
+        }
+        set {
+            self.billInfo.taxPercent = newValue
+        }
+    }
     public func getSplitAmount() -> Float {
-        return 0.0
+        let tips = amountPreTax * tipsPercent
+        let tax = amountPreTax * taxPercent
+        return (amountPreTax + tips + tax) / Float(splitNumber)
     }
     
     public var splitAmountDisplay: String {
-        return ""
+        return String(format: "%.2f", getSplitAmount())
     }
     
-    public var billInfo : BillInfo {
-        return _billInfo
-    }
     private var splitNum: Int
     
     init(billInfo : BillInfo, split : Int) {
-        self._billInfo = billInfo
+        self.billInfo = billInfo
         self.splitNum = split
     }
 }

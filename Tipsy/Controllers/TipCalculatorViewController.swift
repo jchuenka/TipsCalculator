@@ -1,12 +1,12 @@
 //
-//  TipCalculatorControllerView.swift
+//  TipCalculatorViewController.swift
 //  Tipsy
 //
 
 
 import UIKit
 
-class TipCalculatorControllerView: UIViewController {
+class TipCalculatorViewController: UIViewController {
 
     @IBOutlet weak var taxField: UITextField!
     @IBOutlet weak var amountField: UITextField!
@@ -22,7 +22,7 @@ class TipCalculatorControllerView: UIViewController {
     
     private var isKeyboardShow : Bool = false
  
-    var billEngine : BillEngine?
+    var billEngine : BillEngineInterface?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class TipCalculatorControllerView: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardShow), name:  UIResponder.keyboardDidShowNotification ,object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardShow), name: UIResponder.keyboardDidHideNotification, object: nil)
         
-        billEngine?.billInfo.taxPercent = BillEngine.defaultTax
+        billEngine?.taxPercent = BillEngine.defaultTax
   
         taxField.text = billEngine?.taxDisplay
         
@@ -68,7 +68,7 @@ class TipCalculatorControllerView: UIViewController {
     
     @IBAction func tipButtonPress(_ sender: UIButton) {
         handleKeyboardDisplay()
-        billEngine?.billInfo.tipPercent = buttonList[sender] ?? 0.0
+        billEngine?.tipsPercent = buttonList[sender] ?? 0.0
         setButtonSelected(selectedButton: sender)
     }
     

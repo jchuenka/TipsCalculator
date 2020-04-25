@@ -10,13 +10,9 @@ target 'Tipsy' do
   target 'TipsyTests' do
     inherit! :search_paths
     pod 'Quick'
-    pod 'MockingbirdFramework', '~> 0.11'
-  end
-
-  target 'TipsyUITests' do
-    pod 'Quick'
+    pod 'Nimble'
     pod 'Nimble-Snapshots'
-    # Pods for testing
+    pod 'MockingbirdFramework', '~> 0.11'
   end
 
 end

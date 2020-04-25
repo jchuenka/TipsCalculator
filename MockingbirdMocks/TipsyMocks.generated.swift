@@ -132,11 +132,27 @@ public final class BillEngineInterfaceMock: Tipsy.BillEngineInterface, Mockingbi
       mockingContext.didInvoke(invocation)
       return (stubbingContext.implementation(for: invocation) as! () -> Float)()
     }
+    set {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "amountPreTax.set", arguments: [ArgumentMatcher(newValue)])
+      mockingContext.didInvoke(invocation)
+      let implementation = stubbingContext.implementation(for: invocation, optional: true)
+      if let concreteImplementation = implementation as? (Float) -> Void {
+        concreteImplementation(newValue)
+      } else {
+        (implementation as? () -> Void)?()
+      }
+    }
   }
 
   public func getAmountPreTax() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float> {
     let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "amountPreTax.get", arguments: [])
     return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float>(mock: self, invocation: invocation)
+  }
+
+  public func setAmountPreTax(_ newValue: @escaping @autoclosure () -> Float) -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(newValue)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "amountPreTax.set", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void>(mock: self, invocation: invocation)
   }
 
   // MARK: Mocked splitAmountDisplay
@@ -215,6 +231,37 @@ public final class BillEngineInterfaceMock: Tipsy.BillEngineInterface, Mockingbi
     return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> String, String>(mock: self, invocation: invocation)
   }
 
+  // MARK: Mocked taxPercent
+
+  public var `taxPercent`: Float {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "taxPercent.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> Float)()
+    }
+    set {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "taxPercent.set", arguments: [ArgumentMatcher(newValue)])
+      mockingContext.didInvoke(invocation)
+      let implementation = stubbingContext.implementation(for: invocation, optional: true)
+      if let concreteImplementation = implementation as? (Float) -> Void {
+        concreteImplementation(newValue)
+      } else {
+        (implementation as? () -> Void)?()
+      }
+    }
+  }
+
+  public func getTaxPercent() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "taxPercent.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float>(mock: self, invocation: invocation)
+  }
+
+  public func setTaxPercent(_ newValue: @escaping @autoclosure () -> Float) -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(newValue)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "taxPercent.set", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void>(mock: self, invocation: invocation)
+  }
+
   // MARK: Mocked tipDisplay
 
   public var `tipDisplay`: String {
@@ -238,11 +285,27 @@ public final class BillEngineInterfaceMock: Tipsy.BillEngineInterface, Mockingbi
       mockingContext.didInvoke(invocation)
       return (stubbingContext.implementation(for: invocation) as! () -> Float)()
     }
+    set {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "tipsPercent.set", arguments: [ArgumentMatcher(newValue)])
+      mockingContext.didInvoke(invocation)
+      let implementation = stubbingContext.implementation(for: invocation, optional: true)
+      if let concreteImplementation = implementation as? (Float) -> Void {
+        concreteImplementation(newValue)
+      } else {
+        (implementation as? () -> Void)?()
+      }
+    }
   }
 
   public func getTipsPercent() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float> {
     let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "tipsPercent.get", arguments: [])
     return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float>(mock: self, invocation: invocation)
+  }
+
+  public func setTipsPercent(_ newValue: @escaping @autoclosure () -> Float) -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(newValue)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "tipsPercent.set", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void>(mock: self, invocation: invocation)
   }
 
   fileprivate init(sourceLocation: Mockingbird.SourceLocation) {
@@ -320,6 +383,16 @@ public final class BillEngineMock: Tipsy.BillEngine, Mockingbird.Mock {
       mockingContext.didInvoke(invocation)
       return (stubbingContext.implementation(for: invocation) as! () -> Float)()
     }
+    set {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "amountPreTax.set", arguments: [ArgumentMatcher(newValue)])
+      mockingContext.didInvoke(invocation)
+      let implementation = stubbingContext.implementation(for: invocation, optional: true)
+      if let concreteImplementation = implementation as? (Float) -> Void {
+        concreteImplementation(newValue)
+      } else {
+        (implementation as? () -> Void)?()
+      }
+    }
   }
 
   public func getAmountPreTax() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float> {
@@ -327,19 +400,10 @@ public final class BillEngineMock: Tipsy.BillEngine, Mockingbird.Mock {
     return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float>(mock: self, invocation: invocation)
   }
 
-  // MARK: Mocked billInfo
-
-  override public var `billInfo`: Tipsy.BillInfo {
-    get {
-      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "billInfo.get", arguments: [])
-      mockingContext.didInvoke(invocation)
-      return (stubbingContext.implementation(for: invocation) as! () -> Tipsy.BillInfo)()
-    }
-  }
-
-  public func getBillInfo() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Tipsy.BillInfo, Tipsy.BillInfo> {
-    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "billInfo.get", arguments: [])
-    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Tipsy.BillInfo, Tipsy.BillInfo>(mock: self, invocation: invocation)
+  public func setAmountPreTax(_ newValue: @escaping @autoclosure () -> Float) -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(newValue)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "amountPreTax.set", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void>(mock: self, invocation: invocation)
   }
 
   // MARK: Mocked splitAmountDisplay
@@ -418,6 +482,37 @@ public final class BillEngineMock: Tipsy.BillEngine, Mockingbird.Mock {
     return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> String, String>(mock: self, invocation: invocation)
   }
 
+  // MARK: Mocked taxPercent
+
+  override public var `taxPercent`: Float {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "taxPercent.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> Float)()
+    }
+    set {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "taxPercent.set", arguments: [ArgumentMatcher(newValue)])
+      mockingContext.didInvoke(invocation)
+      let implementation = stubbingContext.implementation(for: invocation, optional: true)
+      if let concreteImplementation = implementation as? (Float) -> Void {
+        concreteImplementation(newValue)
+      } else {
+        (implementation as? () -> Void)?()
+      }
+    }
+  }
+
+  public func getTaxPercent() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "taxPercent.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float>(mock: self, invocation: invocation)
+  }
+
+  public func setTaxPercent(_ newValue: @escaping @autoclosure () -> Float) -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(newValue)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "taxPercent.set", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void>(mock: self, invocation: invocation)
+  }
+
   // MARK: Mocked tipDisplay
 
   override public var `tipDisplay`: String {
@@ -441,11 +536,27 @@ public final class BillEngineMock: Tipsy.BillEngine, Mockingbird.Mock {
       mockingContext.didInvoke(invocation)
       return (stubbingContext.implementation(for: invocation) as! () -> Float)()
     }
+    set {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "tipsPercent.set", arguments: [ArgumentMatcher(newValue)])
+      mockingContext.didInvoke(invocation)
+      let implementation = stubbingContext.implementation(for: invocation, optional: true)
+      if let concreteImplementation = implementation as? (Float) -> Void {
+        concreteImplementation(newValue)
+      } else {
+        (implementation as? () -> Void)?()
+      }
+    }
   }
 
   public func getTipsPercent() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float> {
     let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "tipsPercent.get", arguments: [])
     return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float>(mock: self, invocation: invocation)
+  }
+
+  public func setTipsPercent(_ newValue: @escaping @autoclosure () -> Float) -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(newValue)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "tipsPercent.set", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void>(mock: self, invocation: invocation)
   }
 
   // MARK: Mocked `getSplitAmount`()
@@ -932,9 +1043,9 @@ public func mock(_ type: Tipsy.SceneDelegate.Type, file: StaticString = #file, l
   return SceneDelegateMock.InitializerProxy.self
 }
 
-// MARK: - Mocked TipCalculatorControllerView
+// MARK: - Mocked TipCalculatorViewController
 
-public final class TipCalculatorControllerViewMock: Tipsy.TipCalculatorControllerView, Mockingbird.Mock {
+public final class TipCalculatorViewControllerMock: Tipsy.TipCalculatorViewController, Mockingbird.Mock {
   static let staticMock = Mockingbird.StaticMock()
   public let mockingContext = Mockingbird.MockingContext()
   public let stubbingContext = Mockingbird.StubbingContext()
@@ -943,19 +1054,19 @@ public final class TipCalculatorControllerViewMock: Tipsy.TipCalculatorControlle
     get { return stubbingContext.sourceLocation }
     set {
       stubbingContext.sourceLocation = newValue
-      TipCalculatorControllerViewMock.staticMock.stubbingContext.sourceLocation = newValue
+      TipCalculatorViewControllerMock.staticMock.stubbingContext.sourceLocation = newValue
     }
   }
 
   public enum InitializerProxy {
-    public static func initialize(`coder`: NSCoder, __file: StaticString = #file, __line: UInt = #line) -> TipCalculatorControllerViewMock? {
-      let mock: TipCalculatorControllerViewMock? = TipCalculatorControllerViewMock(coder: `coder`)
+    public static func initialize(`coder`: NSCoder, __file: StaticString = #file, __line: UInt = #line) -> TipCalculatorViewControllerMock? {
+      let mock: TipCalculatorViewControllerMock? = TipCalculatorViewControllerMock(coder: `coder`)
       mock?.sourceLocation = SourceLocation(__file, __line)
       return mock
     }
 
-    public static func initialize(`nibName` `nibNameOrNil`: String?, `bundle` `nibBundleOrNil`: Bundle?, __file: StaticString = #file, __line: UInt = #line) -> TipCalculatorControllerViewMock {
-      let mock: TipCalculatorControllerViewMock = TipCalculatorControllerViewMock(nibName: `nibNameOrNil`, bundle: `nibBundleOrNil`)
+    public static func initialize(`nibName` `nibNameOrNil`: String?, `bundle` `nibBundleOrNil`: Bundle?, __file: StaticString = #file, __line: UInt = #line) -> TipCalculatorViewControllerMock {
+      let mock: TipCalculatorViewControllerMock = TipCalculatorViewControllerMock(nibName: `nibNameOrNil`, bundle: `nibBundleOrNil`)
       mock.sourceLocation = SourceLocation(__file, __line)
       return mock
     }
@@ -994,17 +1105,17 @@ public final class TipCalculatorControllerViewMock: Tipsy.TipCalculatorControlle
 
   // MARK: Mocked billEngine
 
-  override public var `billEngine`: Tipsy.BillEngine? {
+  override public var `billEngine`: Tipsy.BillEngineInterface? {
     get {
       let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "billEngine.get", arguments: [])
       mockingContext.didInvoke(invocation)
-      return (stubbingContext.implementation(for: invocation) as! () -> Tipsy.BillEngine?)()
+      return (stubbingContext.implementation(for: invocation) as! () -> Tipsy.BillEngineInterface?)()
     }
     set {
       let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "billEngine.set", arguments: [ArgumentMatcher(newValue)])
       mockingContext.didInvoke(invocation)
       let implementation = stubbingContext.implementation(for: invocation, optional: true)
-      if let concreteImplementation = implementation as? (Tipsy.BillEngine?) -> Void {
+      if let concreteImplementation = implementation as? (Tipsy.BillEngineInterface?) -> Void {
         concreteImplementation(newValue)
       } else {
         (implementation as? () -> Void)?()
@@ -1012,15 +1123,15 @@ public final class TipCalculatorControllerViewMock: Tipsy.TipCalculatorControlle
     }
   }
 
-  public func getBillEngine() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Tipsy.BillEngine?, Tipsy.BillEngine?> {
+  public func getBillEngine() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Tipsy.BillEngineInterface?, Tipsy.BillEngineInterface?> {
     let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "billEngine.get", arguments: [])
-    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Tipsy.BillEngine?, Tipsy.BillEngine?>(mock: self, invocation: invocation)
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Tipsy.BillEngineInterface?, Tipsy.BillEngineInterface?>(mock: self, invocation: invocation)
   }
 
-  public func setBillEngine(_ newValue: @escaping @autoclosure () -> Tipsy.BillEngine?) -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Tipsy.BillEngine?) -> Void, Void> {
+  public func setBillEngine(_ newValue: @escaping @autoclosure () -> Tipsy.BillEngineInterface?) -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Tipsy.BillEngineInterface?) -> Void, Void> {
     let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(newValue)]
     let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "billEngine.set", arguments: arguments)
-    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Tipsy.BillEngine?) -> Void, Void>(mock: self, invocation: invocation)
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Tipsy.BillEngineInterface?) -> Void, Void>(mock: self, invocation: invocation)
   }
 
   // MARK: Mocked personStepper
@@ -1322,7 +1433,7 @@ public final class TipCalculatorControllerViewMock: Tipsy.TipCalculatorControlle
   }
 }
 
-/// Initialize an initializable class mock of `Tipsy.TipCalculatorControllerView`.
-public func mock(_ type: Tipsy.TipCalculatorControllerView.Type, file: StaticString = #file, line: UInt = #line) -> TipCalculatorControllerViewMock.InitializerProxy.Type {
-  return TipCalculatorControllerViewMock.InitializerProxy.self
+/// Initialize an initializable class mock of `Tipsy.TipCalculatorViewController`.
+public func mock(_ type: Tipsy.TipCalculatorViewController.Type, file: StaticString = #file, line: UInt = #line) -> TipCalculatorViewControllerMock.InitializerProxy.Type {
+  return TipCalculatorViewControllerMock.InitializerProxy.self
 }
