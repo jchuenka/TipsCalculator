@@ -43,6 +43,9 @@ class CalculateTipsViewControllerTests: QuickSpec {
                 }
             }
         }
+        afterEach {
+            XCUIDevice.shared.orientation = .portrait
+        }
     }
 
 }
