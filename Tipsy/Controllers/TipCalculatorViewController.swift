@@ -78,6 +78,22 @@ class TipCalculatorViewController: UIViewController {
         splitNumberLabel.text = billEngine?.splitDisplay
     }
     
+    @IBAction func amountFieldEditEnded(_ sender: UITextField) {
+        guard let str = amountField.text else {
+            print("Error: no amount entered")
+            return
+        }
+        billEngine?.amountPreTax = (str as NSString).floatValue
+
+    }
+    @IBAction func taxFieldEditEnded(_ sender: UITextField) {
+        guard let str = taxField.text else {
+            print("Error: no tax entered")
+            return
+        }
+        billEngine?.taxPercent = (str as NSString).floatValue
+    }
+    
     @IBAction func calculateButtonPress(_ sender: Any) {
         handleKeyboardDisplay()
     }

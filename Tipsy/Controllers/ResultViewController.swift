@@ -12,14 +12,28 @@ class ResultViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var splitDescLable: UILabel!
+    private var engine : BillEngineInterface?
+    
+    func initilize(_ engine : BillEngineInterface) {
+        self.engine = engine
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        resultLabel.text = engine?.splitAmountDisplay ?? "0.0"
+        guard let splitNum = engine?.splitNumber, let tipDisplay = engine?.tipDisplay else {
+            print("Error: No engine value provided")
+            splitDescLable.text = "Error, no value provided!"
+            splitDescLable.textColor = .red
+            return
+        }
+        splitDescLable.text = "Split between \(splitNum) people with \(tipDisplay) tip"
+        
     }
     
 
     @IBAction func recalculateButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

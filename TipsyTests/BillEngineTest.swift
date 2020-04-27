@@ -28,9 +28,10 @@ class BillEngineTest: QuickSpec {
                         verify(infoMock.setAmountPreTax(expected)).wasCalled()
                     }
                     it("should set taxPercent") {
-                        let expected : Float = 0.0815
-                        sut.taxPercent = expected
-                        verify(infoMock.setTaxPercent(expected)).wasCalled()
+                        let settingValue : Float = 8.15
+                        let expectedValue : Float = settingValue / 100.0
+                        sut.taxPercent = settingValue
+                        verify(infoMock.setTaxPercent(expectedValue)).wasCalled()
                     }
                     it("should set tipPercent") {
                         let expected : Float = 0.10

@@ -10,7 +10,7 @@ import Foundation
 
 public class BillEngine : BillEngineInterface {
     private var billInfo : BillInfo
-    public static var defaultTax: Float = 0.0825
+    public static var defaultTax: Float = 8.25
     
     public var splitNumber: Int {
         get { splitNum }
@@ -61,7 +61,7 @@ public class BillEngine : BillEngineInterface {
             
         }
         set {
-            self.billInfo.taxPercent = newValue
+            self.billInfo.taxPercent = newValue / 100.0
         }
     }
     public func getSplitAmount() -> Float {

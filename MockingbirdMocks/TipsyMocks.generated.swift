@@ -832,6 +832,25 @@ public final class ResultViewControllerMock: Tipsy.ResultViewController, Mocking
     mockingContext.didInvoke(invocation)
   }
 
+  // MARK: Mocked `initilize`(_ `engine`: Tipsy.BillEngineInterface)
+
+  public override func `initilize`(_ `engine`: Tipsy.BillEngineInterface) -> Void {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`initilize`(_ `engine`: Tipsy.BillEngineInterface) -> Void", arguments: [Mockingbird.ArgumentMatcher(`engine`)])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: true)
+    if let concreteImplementation = implementation as? (Tipsy.BillEngineInterface) -> Void {
+      concreteImplementation(`engine`)
+    } else {
+      (implementation as? () -> Void)?()
+    }
+  }
+
+  public func `initilize`(_ `engine`: @escaping @autoclosure () -> Tipsy.BillEngineInterface) -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, (Tipsy.BillEngineInterface) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(`engine`)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`initilize`(_ `engine`: Tipsy.BillEngineInterface) -> Void", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, (Tipsy.BillEngineInterface) -> Void, Void>(mock: self, invocation: invocation)
+  }
+
   // MARK: Mocked `recalculateButtonPressed`(_ `sender`: UIButton)
 
   public override func `recalculateButtonPressed`(_ `sender`: UIButton) -> Void {
@@ -1320,6 +1339,25 @@ public final class TipCalculatorViewControllerMock: Tipsy.TipCalculatorViewContr
     return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (UIButton) -> Void, Void>(mock: self, invocation: invocation)
   }
 
+  // MARK: Mocked `amountFieldEditEnded`(_ `sender`: UITextField)
+
+  public override func `amountFieldEditEnded`(_ `sender`: UITextField) -> Void {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`amountFieldEditEnded`(_ `sender`: UITextField) -> Void", arguments: [Mockingbird.ArgumentMatcher(`sender`)])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: true)
+    if let concreteImplementation = implementation as? (UITextField) -> Void {
+      concreteImplementation(`sender`)
+    } else {
+      (implementation as? () -> Void)?()
+    }
+  }
+
+  public func `amountFieldEditEnded`(_ `sender`: @escaping @autoclosure () -> UITextField) -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, (UITextField) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(`sender`)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`amountFieldEditEnded`(_ `sender`: UITextField) -> Void", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, (UITextField) -> Void, Void>(mock: self, invocation: invocation)
+  }
+
   // MARK: Mocked `calculateButtonPress`(_ `sender`: Any)
 
   public override func `calculateButtonPress`(_ `sender`: Any) -> Void {
@@ -1393,6 +1431,25 @@ public final class TipCalculatorViewControllerMock: Tipsy.TipCalculatorViewContr
     let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(`sender`)]
     let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`personStepperValueChanged`(_ `sender`: UIStepper) -> Void", arguments: arguments)
     return Mockingbird.Mockable<Mockingbird.MethodDeclaration, (UIStepper) -> Void, Void>(mock: self, invocation: invocation)
+  }
+
+  // MARK: Mocked `taxFieldEditEnded`(_ `sender`: UITextField)
+
+  public override func `taxFieldEditEnded`(_ `sender`: UITextField) -> Void {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`taxFieldEditEnded`(_ `sender`: UITextField) -> Void", arguments: [Mockingbird.ArgumentMatcher(`sender`)])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: true)
+    if let concreteImplementation = implementation as? (UITextField) -> Void {
+      concreteImplementation(`sender`)
+    } else {
+      (implementation as? () -> Void)?()
+    }
+  }
+
+  public func `taxFieldEditEnded`(_ `sender`: @escaping @autoclosure () -> UITextField) -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, (UITextField) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(`sender`)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`taxFieldEditEnded`(_ `sender`: UITextField) -> Void", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, (UITextField) -> Void, Void>(mock: self, invocation: invocation)
   }
 
   // MARK: Mocked `tipButtonPress`(_ `sender`: UIButton)

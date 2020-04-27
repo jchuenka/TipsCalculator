@@ -15,6 +15,7 @@
 		7B0C5899244F9C5D0085ACE4 /* BillEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C5898244F9C5D0085ACE4 /* BillEngine.swift */; };
 		7B27077D24538AC2009327E6 /* CalculateTipsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27077C24538AC2009327E6 /* CalculateTipsViewControllerTests.swift */; };
 		7B45140D2450DE3900DED3E9 /* BillEngineInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45140C2450DE3900DED3E9 /* BillEngineInterface.swift */; };
+		7BB74E812457518300A9DA62 /* ResultViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB74E802457518300A9DA62 /* ResultViewControllerTests.swift */; };
 		7BCACB7B2450A00E00AA5EB1 /* BillEngineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCACB7A2450A00E00AA5EB1 /* BillEngineTest.swift */; };
 		ADB689532326708D006D4E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689522326708D006D4E2B /* AppDelegate.swift */; };
 		ADB689552326708D006D4E2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689542326708D006D4E2B /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 		7B0C5898244F9C5D0085ACE4 /* BillEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillEngine.swift; sourceTree = "<group>"; };
 		7B27077C24538AC2009327E6 /* CalculateTipsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTipsViewControllerTests.swift; sourceTree = "<group>"; };
 		7B45140C2450DE3900DED3E9 /* BillEngineInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillEngineInterface.swift; sourceTree = "<group>"; };
+		7BB74E802457518300A9DA62 /* ResultViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewControllerTests.swift; sourceTree = "<group>"; };
 		7BCACB782450A00E00AA5EB1 /* TipsyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCACB7A2450A00E00AA5EB1 /* BillEngineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillEngineTest.swift; sourceTree = "<group>"; };
 		7BCACB7C2450A00E00AA5EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				7BCACB7A2450A00E00AA5EB1 /* BillEngineTest.swift */,
 				7BCACB7C2450A00E00AA5EB1 /* Info.plist */,
 				7B27077C24538AC2009327E6 /* CalculateTipsViewControllerTests.swift */,
+				7BB74E802457518300A9DA62 /* ResultViewControllerTests.swift */,
 			);
 			path = TipsyTests;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				7BCACB7B2450A00E00AA5EB1 /* BillEngineTest.swift in Sources */,
 				071B8276A886A7C7EF3098E8 /* TipsyMocks.generated.swift in Sources */,
 				7B27077D24538AC2009327E6 /* CalculateTipsViewControllerTests.swift in Sources */,
+				7BB74E812457518300A9DA62 /* ResultViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
