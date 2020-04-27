@@ -96,6 +96,17 @@ class TipCalculatorViewController: UIViewController {
     
     @IBAction func calculateButtonPress(_ sender: Any) {
         handleKeyboardDisplay()
+        do {
+            let resultView : ResultViewController = try self.instantiateViewController(ResultViewController.self)
+            guard let engine = billEngine else {
+                throw NSError.init(domain: "TipCalculateViewController.calculateButtonPress", code: 201, userInfo: ["billEngine": "is null"])
+            }
+            resultView.initilize(engine)
+            resultView.presentingViewController?.modalPresentationStyle = .popover
+            self.present(resultView, animated: true)
+        } catch let error {
+            print("Error instantiated result viewController \(error)")
+        }
     }
     
     

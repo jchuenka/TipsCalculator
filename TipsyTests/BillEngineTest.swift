@@ -7,6 +7,8 @@
 
 import Mockingbird
 import Quick
+import Nimble
+
 @testable import Tipsy
 
 
@@ -47,40 +49,49 @@ class BillEngineTest: QuickSpec {
                     }
                     it("should return split number") {
                         let result = sut.splitNumber
-                        assert(result == 2, "Should return 2 as the default")
+                        expect(result) == 2
                     }
                     it("should set new split number") {
                         let expected = 6
                         sut.splitNumber = expected
-                        assert(sut.splitNumber == expected, "Failed split number return not equal number settingl ")
+                        expect(sut.splitNumber) == expected
                     }
                     it("should not set split number less than 2") {
                         sut.splitNumber = 3
                         assert(sut.splitNumber == 3, "Failed to set split number greater than min")
                         sut.splitNumber = 1
-                        assert(sut.splitNumber == 3, "Failed split number should not be less than 2.")
+                        expect(sut.splitNumber) == 3
                     }
                     
                     it("should return string format for split number") {
                         let displayString: String = sut.splitDisplay
-                        assert(displayString == "2", "Error! actual string is \(displayString)")
+                        expect(displayString) == "2"
                     }
                     
                     it("should return string format for pretax amount") {
                         let displayString = sut.amountPreTaxDisplay
-                        assert(displayString == "28.20", "Error: actual display string is \(displayString)")
+                        expect(displayString) == "28.20"
                     }
                     it("should return string format for tax percent") {
                         let displayString = sut.taxDisplay
-                        assert(displayString == "8.25", "Error: actual display string is \(displayString)")
+                        expect(displayString) == "8.25"
                     }
                     it("should return string format for tips percent") {
                         let displayString = sut.tipDisplay
-                        assert(displayString == "15%", "Error: actual display string is \(displayString)")
+                        expect(displayString) == "15%"
                     }
                     it("should return string format for split amount") {
                         let displayString = sut.splitAmountDisplay
-                        assert(displayString == "17.38", "Error: actual display string is \(displayString)")
+                        expect(displayString) == "17.38"
+                    }
+                    it("should return total amount") {
+                        let expectedTotal : Float = 34.7565
+                        
+                        expect(sut.totalAmount) == expectedTotal
+                    }
+                    it("should return total amount string") {
+                        let expectedStr = "34.76"
+                        expect(sut.totalAmountDisplay) == expectedStr
                     }
                 }
             }
@@ -95,17 +106,17 @@ class BillEngineTest: QuickSpec {
                     it("should return correct split amount for no tip") {
                         given(infoMock.getTipPercent()) ~> 0.0
                         let amount = sut.getSplitAmount()
-                        assert(amount == 5.0, "\(amount) is incorrect amount")
+                        expect(amount) == 5.0
                     }
                     it("should return correct split amount for 10% tip") {
                         given(infoMock.getTipPercent()) ~> 0.10
                         let amount = sut.getSplitAmount()
-                        assert(amount == 5.5, "\(amount) is incorrect amount")
+                        expect(amount) == 5.5
                     }
                     it("should return correct split for 20% tip") {
                         given(infoMock.getTipPercent()) ~> 0.20
                         let amount = sut.getSplitAmount()
-                        assert(amount == 6.0, "\(amount) is incorrect amount")
+                        expect(amount) == 6.0
                     }
                 }
                 context("with 10% tax") {
@@ -115,17 +126,17 @@ class BillEngineTest: QuickSpec {
                     it("should return correct split amount for no tip") {
                         given(infoMock.getTipPercent()) ~> 0.0
                         let amount = sut.getSplitAmount()
-                        assert(amount == 5.5, "\(amount) is incorrect amount")
+                        expect(amount) == 5.5
                     }
                     it("should return correct split amount for 10% tip") {
                         given(infoMock.getTipPercent()) ~> 0.10
                         let amount = sut.getSplitAmount()
-                        assert(amount == 6.0, "\(amount) is incorrect amount")
+                        expect(amount) == 6.0
                     }
                     it("should return correct split for 20% tip") {
                         given(infoMock.getTipPercent()) ~> 0.20
                         let amount = sut.getSplitAmount()
-                        assert(amount == 6.5, "\(amount) is incorrect amount")
+                        expect(amount) == 6.5
                     }
 
                 }

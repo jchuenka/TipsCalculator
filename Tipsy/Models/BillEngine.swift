@@ -64,10 +64,19 @@ public class BillEngine : BillEngineInterface {
             self.billInfo.taxPercent = newValue / 100.0
         }
     }
-    public func getSplitAmount() -> Float {
+    
+    public var totalAmount: Float {
         let tips = amountPreTax * tipsPercent
         let tax = amountPreTax * taxPercent
-        return (amountPreTax + tips + tax) / Float(splitNumber)
+        return amountPreTax + tips + tax
+    }
+    
+    public var totalAmountDisplay : String  {
+        return String(format: "%.2f", totalAmount)
+    }
+    
+    public func getSplitAmount() -> Float {
+        return totalAmount / Float(splitNumber)
     }
     
     public var splitAmountDisplay: String {

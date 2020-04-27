@@ -19,4 +19,6 @@ public protocol BillEngineInterface {
     var tipsPercent : Float { get set }
     func getSplitAmount() -> Float
     var splitAmountDisplay : String { get }
+    var totalAmount : Float { get }
+    var totalAmountDisplay : String { get }
 }

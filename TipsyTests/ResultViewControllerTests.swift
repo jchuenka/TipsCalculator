@@ -37,6 +37,7 @@ class ResultViewControllerTests: QuickSpec {
                     given(mockEngine.getSplitAmountDisplay()) ~> "15.30"
                     given(mockEngine.getSplitNumber()) ~> 4
                     given(mockEngine.getTipDisplay()) ~> "15%"
+                    given(mockEngine.getTotalAmountDisplay()) ~> "61.20"
                 }
                 it("should display result view in portrait") {
                     let view = vut.view

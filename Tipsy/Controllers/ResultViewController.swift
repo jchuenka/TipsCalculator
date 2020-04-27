@@ -10,6 +10,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var splitDescLable: UILabel!
     private var engine : BillEngineInterface?
@@ -21,12 +22,15 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resultLabel.text = engine?.splitAmountDisplay ?? "0.0"
-        guard let splitNum = engine?.splitNumber, let tipDisplay = engine?.tipDisplay else {
+        guard let splitNum = engine?.splitNumber,
+            let tipDisplay = engine?.tipDisplay,
+            let totalDisplay = engine?.totalAmountDisplay else {
             print("Error: No engine value provided")
             splitDescLable.text = "Error, no value provided!"
             splitDescLable.textColor = .red
             return
         }
+        totalLabel.text = "Total: \(totalDisplay)"
         splitDescLable.text = "Split between \(splitNum) people with \(tipDisplay) tip"
         
     }

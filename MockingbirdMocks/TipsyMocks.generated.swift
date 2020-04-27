@@ -308,6 +308,36 @@ public final class BillEngineInterfaceMock: Tipsy.BillEngineInterface, Mockingbi
     return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void>(mock: self, invocation: invocation)
   }
 
+  // MARK: Mocked totalAmountDisplay
+
+  public var `totalAmountDisplay`: String {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalAmountDisplay.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> String)()
+    }
+  }
+
+  public func getTotalAmountDisplay() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> String, String> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalAmountDisplay.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> String, String>(mock: self, invocation: invocation)
+  }
+
+  // MARK: Mocked totalAmount
+
+  public var `totalAmount`: Float {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalAmount.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> Float)()
+    }
+  }
+
+  public func getTotalAmount() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalAmount.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float>(mock: self, invocation: invocation)
+  }
+
   fileprivate init(sourceLocation: Mockingbird.SourceLocation) {
     Mockingbird.checkVersion(for: self)
     self.sourceLocation = sourceLocation
@@ -557,6 +587,36 @@ public final class BillEngineMock: Tipsy.BillEngine, Mockingbird.Mock {
     let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(newValue)]
     let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "tipsPercent.set", arguments: arguments)
     return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (Float) -> Void, Void>(mock: self, invocation: invocation)
+  }
+
+  // MARK: Mocked totalAmountDisplay
+
+  override public var `totalAmountDisplay`: String {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalAmountDisplay.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> String)()
+    }
+  }
+
+  public func getTotalAmountDisplay() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> String, String> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalAmountDisplay.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> String, String>(mock: self, invocation: invocation)
+  }
+
+  // MARK: Mocked totalAmount
+
+  override public var `totalAmount`: Float {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalAmount.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> Float)()
+    }
+  }
+
+  public func getTotalAmount() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalAmount.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Float, Float>(mock: self, invocation: invocation)
   }
 
   // MARK: Mocked `getSplitAmount`()
@@ -811,6 +871,37 @@ public final class ResultViewControllerMock: Tipsy.ResultViewController, Mocking
   public func setSplitDescLable(_ newValue: @escaping @autoclosure () -> UIKit.UILabel) -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, (UIKit.UILabel) -> Void, Void> {
     let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(newValue)]
     let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "splitDescLable.set", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (UIKit.UILabel) -> Void, Void>(mock: self, invocation: invocation)
+  }
+
+  // MARK: Mocked totalLabel
+
+  override public var `totalLabel`: UIKit.UILabel! {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalLabel.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> UIKit.UILabel)()
+    }
+    set {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalLabel.set", arguments: [ArgumentMatcher(newValue)])
+      mockingContext.didInvoke(invocation)
+      let implementation = stubbingContext.implementation(for: invocation, optional: true)
+      if let concreteImplementation = implementation as? (UIKit.UILabel) -> Void {
+        concreteImplementation(newValue)
+      } else {
+        (implementation as? () -> Void)?()
+      }
+    }
+  }
+
+  public func getTotalLabel() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> UIKit.UILabel, UIKit.UILabel> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalLabel.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> UIKit.UILabel, UIKit.UILabel>(mock: self, invocation: invocation)
+  }
+
+  public func setTotalLabel(_ newValue: @escaping @autoclosure () -> UIKit.UILabel) -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, (UIKit.UILabel) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(newValue)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "totalLabel.set", arguments: arguments)
     return Mockingbird.Mockable<Mockingbird.VariableDeclaration, (UIKit.UILabel) -> Void, Void>(mock: self, invocation: invocation)
   }
 
